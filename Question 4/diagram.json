@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "Raghul S ee20b103",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -38.67, "left": -5.33, "attrs": {} },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": 228.43,
+      "left": -91.83,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -14.9,
+      "left": -170.5,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.2", "bz1:1", "black", [ "h-26.17", "v-0.16", "h-115.33" ] ],
+    [ "esp:D13", "bz1:2", "green", [ "h0" ] ],
+    [ "esp:D34", "ntc1:OUT", "green", [ "h-63.28", "v-92.16", "h315.73", "v344.78" ] ],
+    [ "esp:3V3", "ntc1:VCC", "green", [ "v-0.81", "h126.17", "v146.16" ] ],
+    [ "esp:GND.1", "ntc1:GND", "black", [ "h59.65", "v3.07" ] ]
+  ]
+}
