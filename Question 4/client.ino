@@ -67,7 +67,7 @@ Serial.print((char)incomingByte);   //To print the message on Serial monitor
   for(int j=0;;j++){
   int analogValue = analogRead(34);
   celsius = 1 / (log(1 / (4095. / analogValue - 1)) / BETA + 1.0 / 298.15) - 273.15;
-  if(celsius<45){
+  if(celsius>45){
     digitalWrite(13,HIGH);
     delayMicroseconds(100);
     digitalWrite(13,LOW);
