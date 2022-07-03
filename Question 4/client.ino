@@ -59,7 +59,7 @@ void loop()
 
     // say what you got:
   name[i]=(char)incomingByte;     
-Serial.print((char)incomingByte);   //To print the message on Serial monitor
+  Serial.print((char)incomingByte);   //To print the message on Serial monitor
   i++;
   }
 
